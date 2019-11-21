@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Parallax Website Demo</title>
+  <title>Insert Company Name</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="script" href="script.js">
 </head>
 <body>
+    <div id="navbar">
+        <a>Home</a>
+        <a>News</a>
+        <a>Contact</a>
+    </div>
   <div class="pimg1">
     <div class="ptext">
       <span class="border">
-        Parallax Website
+        Insert Company Name
       </span>
     </div>
   </div>
@@ -60,5 +66,21 @@
       </span>
     </div>
   </div>
+
+  <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+  </script>
+
 </body>
 </html>
