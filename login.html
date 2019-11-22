@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Insert Company Name</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+</head>
+<body>
+    <ul id="nav" class="clearfix">
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="index.htm#products">Products</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#news">News</a></li>
+      <li style="float:right" ><a href = "#" 
+        onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+
+        <div id="id01" class="modal">
+          
+          <form class="modal-content animate" action="/action_page.php" method="post">
+        
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+          </form>
+        </div>
+        </li>
+      <li style="float:right" ><a href="#blog">Blog</a></li>
+    </ul>
+  
+  <div id="home" class="section1">
+    <div class="ptext">
+      <span class="border">
+        Insert Company Name
+      </span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
