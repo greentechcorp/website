@@ -27,60 +27,39 @@ if (!isset($_SESSION['loggedin'])) {
       <li style="float:right" ><a href="logout.php">Logout</a></li>
       <li style="float:right" ><a href="#">Blog</a></li>
     </ul>
-  <div id="home" class="section1">
-    <div class="ptext">
-      <span class="border">
-        Welcome back, <?=$_SESSION['name']?>!
-      </span>
+
+    <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
   </div>
-
-  <section id="products" class="section section-light">
-    <h2>Products</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!
-    </p>
-  </section>
-
-  <div class="section2">
-    <div class="ptext">
-      <span class="border trans">
-        Image Two Text
-      </span>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>We are social!</h3>
+      <p>Social media links</p>
     </div>
   </div>
-
-  <section id="team" class="section section-dark">
-    <h2>This is us!</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in.
-    </p>
-  </section>
-
-  <div class="section3">
-    <div class="ptext">
-      <span class="border trans">
-        Image Three Text
-      </span>
-    </div>
-  </div>
-
-  <section id="contact" class="section section-dark">
-    <h2>Contact</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in.
-    </p>
-  </section>
-
-  <div class="section1">
-    <div class="ptext">
-      <span class="border">
-        Woooooow
-      </span>
-    </div>
-  </div>
+</div>
   <footer>
-    <div class="foot">
+    <div class="footer">
       <p>LEGAL STUFF</p>
     </div>
   </footer>
