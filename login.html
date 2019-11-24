@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,39 +17,31 @@
       <li><a href="#team">Team</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#news">News</a></li>
-      <li style="float:right" ><a href = "#" 
-        onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
-
-        <div id="id01" class="modal">
-          
-          <form class="modal-content animate" action="/action_page.php" method="post">
-        
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-        
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-                
-              <button type="submit">Login</button>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
-            </div>
-          </form>
-        </div>
-        </li>
-      <li style="float:right" ><a href="#blog">Blog</a></li>
+      <li style="float:right" ><a href="#">Login</a></li>
+      <li style="float:right" ><a href="blog.php">Blog</a></li>
     </ul>
-  
-  <div id="home" class="section1">
-    <div class="ptext">
-      <span class="border">
-        Insert Company Name
-      </span>
-    </div>
-  </div>
+  <div id="login" class="section4">
+    <form class="modal-content" action="authenticate.php" method="post">
+      <div class="container">
 
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    
+        <button type="submit" value="login">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    
+      <div class="container" style="background-color:#f1f1f1">
+        <a class="cancelbtn" href="index.html">Cancel</a>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
