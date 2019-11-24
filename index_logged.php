@@ -1,9 +1,7 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: login.html');
+	header('Location: index.php');
 	exit();
 }
 ?>
@@ -19,18 +17,18 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 <body>
     <ul id="nav" class="clearfix">
-      <li><a href="index.php">Homepage</a></li>
+      <li><a href="#home">Homepage</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="news.html">News</a></li>
       <li style="float:right" ><a href="logout.php">Logout</a></li>
-      <li style="float:right" ><a href="#">Blog</a></li>
+      <li style="float:right" ><a href="blog.php">Blog</a></li>
     </ul>
   <div id="home" class="section1">
     <div class="ptext">
       <span class="border">
-        Welcome back, <?=$_SESSION['name']?>!
+        Insert Company Name
       </span>
     </div>
   </div>
