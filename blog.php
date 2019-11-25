@@ -1,7 +1,5 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: login.html');
 	exit();
@@ -20,8 +18,8 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
     <ul id="nav" class="clearfix">
       <li><a href="index.php">Homepage</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#team">Team</a></li>
+      <li><a href="index.php#products">Products</a></li>
+      <li><a href="index.php#team">Team</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="news.html">News</a></li>
       <li style="float:right" ><a href="logout.php">Logout</a></li>
@@ -63,6 +61,6 @@ if (!isset($_SESSION['loggedin'])) {
       <p>LEGAL STUFF</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="sticky_bar.js"></script>
 </body>
 </html>

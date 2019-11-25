@@ -82,6 +82,6 @@ if (!isset($_SESSION['loggedin'])) {
       <p>LEGAL STUFF</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="sticky_bar.js"></script>
 </body>
 </html>

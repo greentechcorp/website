@@ -22,7 +22,7 @@ if (isset($_SESSION['loggedin'])) {
       <li><a href="#team">Team</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="news.html">News</a></li>
-      <li style="float:right" ><a href="login.html">Login</a></li>
+      <li style="float:right" ><a href="login.php">Login</a></li>
       <li style="float:right" ><a href="blog.php">Blog</a></li>
     </ul>
   <div id="home" class="section1">
@@ -82,6 +82,6 @@ if (isset($_SESSION['loggedin'])) {
       <p>LEGAL STUFF</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="sticky_bar.js"></script>
 </body>
 </html>
