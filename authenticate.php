@@ -34,7 +34,7 @@ if ($stmt->num_rows > 0) {
 		header("location:login.php?msg=failed");
 	}
 } else {
-	echo 'Incorrect username!';
+	header("location:login.php?msg=failed");
 }
 $stmt->close();
 ?>
