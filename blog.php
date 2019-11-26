@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: login.html');
+	header('Location: login.php');
 	exit();
 }
 ?>
@@ -16,15 +16,7 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <ul id="nav" class="clearfix">
-      <li><a href="index.php">Homepage</a></li>
-      <li><a href="index.php#products">Products</a></li>
-      <li><a href="index.php#team">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="news.html">News</a></li>
-      <li style="float:right" ><a href="logout.php">Logout</a></li>
-      <li style="float:right" ><a href="#">Blog</a></li>
-    </ul>
+  <?php include("navbar.php"); ?>
 
     <div class="row">
   <div class="leftcolumn">

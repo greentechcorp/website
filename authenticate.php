@@ -9,10 +9,6 @@ if ( mysqli_connect_errno() ) {
 	die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if ( !isset($_POST['username'], $_POST['password']) ) {
-	die ('Please fill both the username and password field!');
-}
-
 if ($stmt = $con->prepare('SELECT id, psswrd FROM user_login WHERE username = ?')) {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
@@ -29,7 +25,7 @@ if ($stmt->num_rows > 0) {
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
-      header('Location: blog.php');
+    	header('Location: blog.php');
 	} else {
 		header("location:login.php?msg=failed");
 	}

@@ -16,15 +16,8 @@ echo "Wrong Username / Password";
   <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
 </head>
 <body>
-    <ul id="nav" class="clearfix">
-      <li><a href="index.php">Homepage</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="news.html">News</a></li>
-      <li style="float:right" ><a href="#">Login</a></li>
-      <li style="float:right" ><a href="blog.php">Blog</a></li>
-    </ul>
+  <?php include("navbar.php"); ?>
+  
   <div id="login" class="section4">
     <form class="modal-content" action="authenticate.php" method="post">
       <div class="container">
@@ -42,10 +35,11 @@ echo "Wrong Username / Password";
       </div>
     
       <div class="container" style="background-color:#f1f1f1">
-        <a class="cancelbtn" href="index.html">Cancel</a>
+        <a class="cancelbtn" href="index.php">Cancel</a>
         <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
     </form>
+    
   </div>
   <script src="sticky_bar.js"></script>
 </body>
