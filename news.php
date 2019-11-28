@@ -6,19 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Insert Company Name</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
 </head>
 <body>
-    <ul id="nav" class="clearfix">
-      <li><a href="index.php">Homepage</a></li>
-      <li><a href="index.php#products">Products</a></li>
-      <li><a href="index.php#team">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="news.html">News</a></li>
-      <li style="float:right" ><a href="#">Login</a></li>
-      <li style="float:right" ><a href="blog.php">Blog</a></li>
-    </ul>
+    <?php include("navbar.php"); ?>
+
     <a>BLOG</a>
   <script src="sticky_bar.js"></script>
 </body>

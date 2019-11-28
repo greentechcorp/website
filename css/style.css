@@ -233,6 +233,10 @@ span.psw {
   padding:20px 30px;
 }
 
+.leftcolumn .card {
+  border:2px solid;
+}
+
 .fakeimg {
   background-color: #aaa;
   width: 100%;
@@ -243,6 +247,45 @@ span.psw {
    background-color: white;
    padding: 20px;
    margin-top: 20px;
+}
+
+.btn {
+  background-color: #333;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  position: relative;
+  float: right;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content input[type=submit] {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover, .dropdown:hover .btn {
+  background-color: #0b7dda;
 }
 
 .row:after {
@@ -256,6 +299,61 @@ span.psw {
   text-align: center;
   background: #ddd;
 }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding-top: 60px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   

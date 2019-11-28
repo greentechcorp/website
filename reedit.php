@@ -2,16 +2,19 @@
 session_start();
 include 'postClass.php';
 include 'public_functions.php';
-$crud   = new Post();
+$postid = $_GET['post'];
+
+$crud = new Post();
 
 if ($_POST) {
   $b_title = $_POST['title'];
   $b_content = $_POST['content'];
   $b_postOwnerID = $_SESSION['id'];
-  $crud -> insertpost($b_title, $b_content,$b_postOwnerID);
+  $crud -> updatepost($postid, $b_content, $b_title);
 	header("location:blog.php");
 }
-
+ 
+$result  = $crud->getpost($postid);
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +29,9 @@ if ($_POST) {
 </head>
 <body>
   <?php include("navbar.php"); ?>
-
+  <?php
+  while ($row = $result->fetch_assoc()) {
+  ?>
   <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
     <div class="container">
       <form method="post">
@@ -35,7 +40,7 @@ if ($_POST) {
             <label for="title">Title</label>
           </div>
           <div class="col-75">
-            <input type="text" id="title" name="title" placeholder="Find a catchy title...">
+            <input type="text" id="title" name="title" placeholder="Find a catchy title..." value="<?php echo $row['postTitle'];?>">
           </div>
         </div>
         <div class="row">
@@ -43,11 +48,11 @@ if ($_POST) {
             <label for="content">Content</label>
           </div>
           <div class="col-75">
-            <textarea id="content" name="content" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea id="content" name="content" placeholder="Write something.." style="height:200px"><?php echo $row['postContent'];?></textarea>
           </div>
         </div>
         <div class="row">
-          <input type="submit" name="submit" value="Submit">
+          <input type="submit" name="submit" value="Resubmit">
         </div>
       </form>
     </div>
@@ -58,19 +63,9 @@ if ($_POST) {
     </div>
     </div>
     <?php endif ?>
-  <div class="row">
-  <div class="leftcolumn">
-
-  <?php include("displayPost.php"); ?>
-</div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h3>We are social!</h3>
-      <p>Social media links</p>
-    </div>
-  </div>
-  </div>
-  
+    <?php
+  }
+  ?>
   <footer>
     <div class="footer">
       <p>LEGAL STUFF</p>

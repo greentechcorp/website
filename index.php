@@ -8,7 +8,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Insert Company Name</title>
+  <title>Cycloop</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,25 +16,17 @@ session_start();
   
   <?php include("navbar.php"); ?>
   
-  <div id="home" class="section1">
+  <div id="cycloop" class="section1">
     <div class="ptext">
       <span class="border">
-        Insert Company Name
+        CYCLOOP
       </span>
     </div>
   </div>
 
-  <?php include("products.html"); ?>
+  <?php include("product.html"); ?>
 
   <?php include("team.html"); ?>
-
-  <div class="section1">
-    <div class="ptext">
-      <span class="border">
-        Woooooow
-      </span>
-    </div>
-  </div>
 
   <?php include("contact.html"); ?>
 
