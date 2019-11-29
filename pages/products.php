@@ -1,5 +1,11 @@
-<h2>Products</h2>
+<h2>Product</h2>
 
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!
-</p>
+
+<div style="width: 100%; overflow: hidden;">
+    <div style="float: left; width: 45%;"> 
+    	<img src="img/product.png" alt="Product" style="height: 100%; width: 100%; border-style: solid;"> 
+ 	</div>
+    <div style="float: right; width: 45%; text-align: left;"> 
+    	This is the cool product.
+    </div>
+</div>
