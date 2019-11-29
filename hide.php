@@ -3,9 +3,9 @@ include "postClass.php";
 
 $ids = $_GET['post'];
  
-$del = new Post();
+$hide = new Post();
  
-$result = $del->deletepost($ids);
+$result = $hide->hidepost($ids);
  
 if($result === true)
 {

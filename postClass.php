@@ -52,7 +52,20 @@ class Post
         return $sql;
  
     }
+    public function hidepost($id){
+        $con    = $this->db->OpenCon();
+        $sql = "UPDATE blog_posts SET public = 0 WHERE postID = $id";
+        $result = $con->query($sql);
+        if (!$result) {
  
+            $error = $con->error;
+ 
+            $this->db->CloseCon();
+            return $error;
+        }
+        $result = true;
+        return $result;
+    }
     public function deletepost($id)
     {
  

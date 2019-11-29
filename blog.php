@@ -54,7 +54,7 @@ if ($_POST) {
     <?php else: ?>
       <div class = "container">
       <div class="card">
-          <h2>Login to write a post</h2>
+          <h2>Log in to write a post</h2>
     </div>
     </div>
     <?php endif ?>
@@ -75,7 +75,19 @@ if ($_POST) {
     <div class="footer">
       <p>LEGAL STUFF</p>
     </div>
-  </footer>
-  <script src="sticky_bar.js"></script>
+  </footer>  
+  <script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+      document.getElementById("nav").style.top = "0";
+  } 
+  else {
+      document.getElementById("nav").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+  }
+  </script>
 </body>
 </html>

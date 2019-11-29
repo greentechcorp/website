@@ -10,6 +10,8 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cycloop</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script scr='navbarfooter.js'></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,7 +31,20 @@ session_start();
   <?php include("team.html"); ?>
 
   <?php include("contact.html"); ?>
-
-  <script src="sticky_bar.js"></script>
+  <script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+      document.getElementById("nav").style.top = "0";
+      document.getElementById("contact").style.bottom = "-50px";
+  } 
+  else {
+      document.getElementById("contact").style.bottom = "0";
+      document.getElementById("nav").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+  }
+  </script>
 </body>
 </html>

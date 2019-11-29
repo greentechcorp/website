@@ -31,6 +31,7 @@ li a:hover:not(.active) {
   padding: 0;
   overflow: hidden;
   background-color: #333; 
+  transition: top 0.3s;
 }
 
 #nav li { 
@@ -258,8 +259,12 @@ span.psw {
   outline: none;
 }
 
+.dropbtn{
+  background-image:url('../img/3dots.jpg');
+}
 .dropdown {
   position: relative;
+  display: inline-block;
   float: right;
 }
 
@@ -268,25 +273,23 @@ span.psw {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown-content input[type=submit] {
+.dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+.dropdown:hover .dropdown-content {display: block;}
 
-.btn:hover, .dropdown:hover .btn {
-  background-color: #0b7dda;
-}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 
 .row:after {
   content: "";
@@ -299,6 +302,20 @@ span.psw {
   text-align: center;
   background: #ddd;
 }
+
+.fixfooter {
+  display: block;
+  width: 100%;
+  position: fixed; z-index: 9999;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd; 
+  transition: bottom 0.3s;
+  text-align: center;
+}
+
 
 input[type=text], select, textarea {
   width: 100%;

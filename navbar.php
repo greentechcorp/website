@@ -1,4 +1,4 @@
-<ul id="nav" class="clearfix">
+<ul id="nav" class="nav">
     <li><a href="index.php#cycloop">Cycloop</a></li>
     <li><a href="index.php#product">Product</a></li>
     <li><a href="index.php#team">Team</a></li>
