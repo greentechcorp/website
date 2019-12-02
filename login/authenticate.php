@@ -5,7 +5,7 @@ if ( mysqli_connect_errno() ) {
 	die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if ($stmt = $conn->prepare('SELECT id, psswrd FROM user_login WHERE username = ?')) {
+if ($stmt = $connection->prepare('SELECT id, psswrd FROM user_login WHERE username = ?')) {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 	$stmt->store_result();

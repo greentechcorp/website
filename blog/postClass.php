@@ -12,34 +12,36 @@ class Post
         $this->db = new DbConnection();
  
     }
-    public function insertpost($b_tittle, $b_content, $b_Owner)
+    public function insertpost($Title, $Content, $Owner)
     {
  
-        $con     = $this->db->OpenCon();
-        $title   = $con->real_escape_string($b_tittle);
-        $content = $con->real_escape_string($b_content);
-        $ownerID     = $con->real_escape_string($b_Owner);
-        $query   = $con->prepare("INSERT INTO blog_posts(postTitle, postContent, postOwnerID) VALUES(?, ?, ?)");
+       $connection     = $this->db->OpenConnection();
+        $title   =$connection->real_escape_string($Title); 
+        //Create a legal SQL string that you can use in an SQL statement. 
+        //The given string is encoded to an escaped SQL string, taking into account the current character set of the connection.
+        $content =$connection->real_escape_string($Content);
+        $ownerID     =$connection->real_escape_string($Owner);
+        $query   =$connection->prepare("INSERT INTO blog_posts(postTitle, postContent, postOwnerID) VALUES(?, ?, ?)");
         $query->bind_param("sss", $title, $content, $ownerID);
         $result = $query->execute();
         if (!$result) {
  
-            $error = $con->error;
+            $error =$connection->error;
  
-            $this->db->CloseCon();
+            $this->db->CloseConnection();
             return $error;
         }
         $result = true;
         return $result;
     }
  
-    public function getpost($postid)
+    public function getpost($id)
     {
-        $con = $this->db->OpenCon();
+       $connection = $this->db->OpenConnection();
  
-        $stmt = "SELECT postTitle,postContent,postOwnerID,postDate,edited from blog_posts WHERE postID = '$postid'";
+        $stmt = "SELECT postTitle,postContent,postOwnerID,postDate,edited from blog_posts WHERE postID = '$id'";
  
-        $result = $con->query($stmt);
+        $result =$connection->query($stmt);
  
         if ($result->num_rows == 1) {
             $sql = $result;
@@ -47,20 +49,20 @@ class Post
             $sql = "No post";
         }
  
-        $this->db->CloseCon();
+        $this->db->CloseConnection();
  
         return $sql;
  
     }
     public function hidepost($id){
-        $con    = $this->db->OpenCon();
+       $connection    = $this->db->OpenConnection();
         $sql = "UPDATE blog_posts SET public = 0 WHERE postID = $id";
-        $result = $con->query($sql);
+        $result =$connection->query($sql);
         if (!$result) {
  
-            $error = $con->error;
+            $error =$connection->error;
  
-            $this->db->CloseCon();
+            $this->db->CloseConnection();
             return $error;
         }
         $result = true;
@@ -69,35 +71,35 @@ class Post
     public function deletepost($id)
     {
  
-        $con    = $this->db->OpenCon();
+       $connection    = $this->db->OpenConnection();
         $sql    = "DELETE FROM blog_posts WHERE postID = '$id'";
-        $result = $con->query($sql);
+        $result =$connection->query($sql);
  
         if (!$result) {
  
-            $error = $con->error;
+            $error =$connection->error;
  
-            $this->db->CloseCon();
+            $this->db->CloseConnection();
             return $error;
         }
         $result = true;
         return $result;
     }
  
-    public function updatepost($a_id, $b_content, $b_tittle)
+    public function updatepost($id, $Content, $Title)
     {
  
-        $con     = $this->db->OpenCon();
-        $title   = $con->real_escape_string($b_tittle);
-        $content = $con->real_escape_string($b_content);
-        $ownerID     = $con->real_escape_string($b_Owner);
-        $query   = $con->prepare("UPDATE blog_posts SET postTitle = ? , postContent = ?, edited = 1 WHERE postID = ?");
-        $query->bind_param("ssi", $title, $content, $a_id);
+       $connection     = $this->db->OpenConnection();
+        $title   =$connection->real_escape_string($Title);
+       $connectiontent =$connection->real_escape_string($Content);
+        $ownerID     =$connection->real_escape_string($Owner);
+        $query   =$connection->prepare("UPDATE blog_posts SET postTitle = ? , postContent = ?, edited = 1 WHERE postID = ?");
+        $query->bind_param("ssi", $title, $content, $id);
         $result = $query->execute();
         if (!$result) {
-            $error = $con->error;
+            $error =$connection->error;
  
-            $this->db->CloseCon();
+            $this->db->CloseConnection();
             return $error;
         }
         $result = true;

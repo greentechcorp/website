@@ -3,21 +3,21 @@ include '..\..\website\login\config.php';
 
 function getPostAuthorById($user_id)
 {
-    global $conn;
-	$sql = "SELECT name FROM user_login WHERE id=$user_id";
-	$result = mysqli_query($conn, $sql);
+    global $connection;
+	$sql = "SELECT fullName FROM user_login WHERE id=$user_id";
+	$result = mysqli_query($connection, $sql);
 	if ($result) {
-		// return username
-		return mysqli_fetch_assoc($result)['name'];
+		// returns full name
+		return mysqli_fetch_assoc($result)['fullName'];
 	} else {
 		return null;
 	}
 }
 
 function getAllPublicPostsIDs(){
-	global $conn;
+	global $connection;
 	$sql = "SELECT postID FROM blog_posts WHERE public = 1";
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($connection, $sql);
 	while($row = mysqli_fetch_assoc($result)) {
     $ids[] = $row['postID'];
 	}
@@ -26,9 +26,9 @@ function getAllPublicPostsIDs(){
 
 function isAdmin($user_id)
 {
-	global $conn;
+	global $connection;
 	$sql = "SELECT admin FROM user_login WHERE id=$user_id";
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($connection, $sql);
 	return mysqli_fetch_assoc($result)['admin'] == true;
 }
 ?>

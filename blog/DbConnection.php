@@ -1,15 +1,15 @@
 <?php
 class DbConnection
 {
-    protected $conn = null;
-    public function OpenCon()
+    protected $connection = null;
+    public function OpenConnection()
     {
-        $this->conn = new mysqli('localhost', 'root', '', 'greentech') or die($conn->connect_error);
-        return $this->conn;
+        $this->connection = new mysqli('localhost', 'root', '', 'greentech') or die($connection->connect_error);
+        return $this->connection;
     }
-    public function CloseCon()
+    public function CloseConnection()
     {
-        $this->conn->close();
+        $this->connection->close();
     }
 }
 ?>

@@ -28,7 +28,7 @@ $result  = $crud->getpost($postid);
   while ($row = $result->fetch_assoc()) { //fetch a result row as an associative array
   ?>
   <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
-    <?php include("postSubmissionEdit.html"); ?>
+    <?php include("postSubmissionEdit.php"); ?>
     <?php endif ?>
     <?php
   }
