@@ -89,9 +89,9 @@ class Post
     public function updatepost($id, $Content, $Title)
     {
  
-       $connection     = $this->db->OpenConnection();
+        $connection     = $this->db->OpenConnection();
         $title   =$connection->real_escape_string($Title);
-       $connectiontent =$connection->real_escape_string($Content);
+        $content =$connection->real_escape_string($Content);
         $ownerID     =$connection->real_escape_string($Owner);
         $query   =$connection->prepare("UPDATE blog_posts SET postTitle = ? , postContent = ?, edited = 1 WHERE postID = ?");
         $query->bind_param("ssi", $title, $content, $id);

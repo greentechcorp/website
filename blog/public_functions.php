@@ -27,8 +27,8 @@ function getAllPublicPostsIDs(){
 function isAdmin($user_id)
 {
 	global $connection;
-	$sql = "SELECT admin FROM user_login WHERE id=$user_id";
+	$sql = "SELECT rank FROM user_login WHERE id=$user_id";
 	$result = mysqli_query($connection, $sql);
-	return mysqli_fetch_assoc($result)['admin'] == true;
+	return mysqli_fetch_assoc($result)['rank'] == '2';
 }
 ?>
