@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '..\..\website\login\config.php';
 
 function getPostAuthorById($user_id)
 {
@@ -14,7 +14,7 @@ function getPostAuthorById($user_id)
 	}
 }
 
-function getAllPublicIDs(){
+function getAllPublicPostsIDs(){
 	global $conn;
 	$sql = "SELECT postID FROM blog_posts WHERE public = 1";
 	$result = mysqli_query($conn, $sql);

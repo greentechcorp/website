@@ -21,7 +21,7 @@ if ($stmt->num_rows > 0) {
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['name'];
 		$_SESSION['id'] = $id;
-    	header('Location: blog.php');
+    	header('Location:/website/blog/blog.php'); //redirects to blog
 	} else {
 		header("location:login.php?msg=failed");
 	}

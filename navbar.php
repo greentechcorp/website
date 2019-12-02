@@ -1,13 +1,13 @@
 <ul id="nav" class="nav">
-    <li><a href="index.php#cycloop">Cycloop</a></li>
-    <li><a href="index.php#product">Product</a></li>
-    <li><a href="index.php#team">Team</a></li>
-    <li><a href="index.php#contact">Contact</a></li>
-    <li><a href="news.php">News</a></li>
-    <li><a href="blog.php">Blog</a></li>
+    <li><a href="/website/index.php#cycloop">Cycloop</a></li>
+    <li><a href="/website/index.php#product">Product</a></li>
+    <li><a href="/website/index.php#team">Team</a></li>
+    <li><a href="/website/index.php#contact">Contact</a></li>
+    <li><a href="/website/news.php">News</a></li>
+    <li><a href="/website/blog/blog.php">Blog</a></li>
     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
-    <li style="float:right" ><a href="logout.php">Logout</a></li>
+    <li style="float:right" ><a href="/website/login/logout.php">Logout</a></li>
     <?php else: ?>
-    <li style="float:right" ><a href="login.php">Login</a></li>
+    <li style="float:right" ><a href="/website/login.php">Login</a></li>
     <?php endif ?>
 </ul>
