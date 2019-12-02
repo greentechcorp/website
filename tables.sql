@@ -2,7 +2,7 @@ CREATE TABLE user_login (
     id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username varchar(255) NOT NULL UNIQUE,
     psswrd varchar(100) NOT NULL,
-    admin tinyint(1) DEFAULT '0' NOT NULL,
+    rank tinyint(1) DEFAULT '0' NOT NULL,
     name varchar(255) NOT NULL
  );
 
