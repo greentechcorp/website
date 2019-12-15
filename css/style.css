@@ -156,12 +156,14 @@ li a:hover:not(.active) {
 }
 .members{
   overflow: hidden;
+  align-content: center;
 }
 
 .team .member{
   width: 20%;
   float: left;
-  padding: 2.5%;
+  padding: 6.6%;
+  padding-top: 3%;
 }
 
 .team .member p{
