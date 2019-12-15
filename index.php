@@ -17,6 +17,8 @@ session_start();
 
   <?php include("team.html"); ?>
 
+  <?php include("partners.html"); ?>
+
   <?php include("contact.html"); ?>
   
   <?php include("navbarFooterScript.html"); ?>
