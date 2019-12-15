@@ -1,8 +1,8 @@
 <ul id="nav" class="nav">
     <li><a href="/website/index.php#cycloop">Cycloop</a></li>
-    <li><a href="/website/index.php#product">Product</a></li>
-    <li><a href="/website/index.php#team">Team</a></li>
-    <li><a href="/website/index.php#contact">Contact</a></li>
+    <li class='b'><a href="/website/index.php#product">Product</a></li>
+    <li class='b'><a href="/website/index.php#team">Team</a></li>
+    <li class='b'><a href="/website/index.php#contact">Contact</a></li>
     <li><a href="/website/news.php">News</a></li>
     <li><a href="/website/blog/blog.php">Blog</a></li>
     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
